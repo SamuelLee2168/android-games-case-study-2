@@ -110,14 +110,3 @@ paid_chart = px.pie(paid,values='Percentage',names='Type')
 st.plotly_chart(paid_chart)
 
 st.markdown("Wow! Only 0.405% of the top google play store games need to be bought. However, note that the 'free' games are only free for downloading the game. The game can make money buy selling in game items to players. This makes sense that most games are free to download but charge for in game items, since this way more players will download the game if it is free.")
-
-
-column1, column2 = st.beta_columns([1,1])
-with column1:
-    st.markdown("The first ring of the plot make up the growth of the categories. The larger area that category takes up, the higher the growth of that category. We can see that GAME ACTION and GAME WORD have much more growth compared to the other categories.")
-    st.markdown("The second ring of the plot are the specific games of each categories. The area the games take up also depend on the growth. ")
-    st.markdown("You can click on one of the categories to only see the games in that category. If we click into GAME WORD and GAME ACTION, we can see that the games 'Fill-The-Words - word search puzzle', and 'Garena AOV: Link Start' take up almost all of the growth of the category. So there was just 2 games that have high growth in the categories. This means that if you make an action game or word game, your game won't necessarily grow faster than other games.")
-    st.markdown("This is often a problem when you take the average of something. One value will pull the average up by a bunch, which will give us a wrong idea of the overall picture.")
-    st.markdown("To solve this problem, we can plot the median of the growth of each category instead of the average.")
-with column2:
-    st.plotly_chart(category_browth_sunburst)
