@@ -5,6 +5,7 @@ from PIL import Image
 
 
 st.sidebar.subheader('Table of contents')
+st.sidebar.write('1. ','<a href=#introduction>Introduction</a>', unsafe_allow_html=True)
 st.sidebar.write('1. ','<a href=#the-top-rated-games>The Top Rated Games</a>', unsafe_allow_html=True)
 st.sidebar.write('2. ','<a href=#flipping-coins>"Flipping Coins"</a>', unsafe_allow_html=True)
 st.sidebar.write('3. ','<a href=#the-top-installed-games>The Top Installed Games</a>', unsafe_allow_html=True)
@@ -16,12 +17,13 @@ st.sidebar.write('7. ','<a href=#the-percentage-of-free-games>The Percentage of 
 
 st.header('Android Games Data Analysis')
 
-st.subheader('The Top Rated Games')
+st.subheader('Introduction')
 
 games = pd.read_csv("android-games.csv")
 
 st.markdown("In this article, we will be looking at a dataset of the top rated games in the google play store. We will ask questions about them to find some interesting observations, and analyze the data of the games.")
 
+st.subheader('The Top Rated Games')
 st.markdown("Let's first look at which games have the highest rating in the dataset, and look at their attributes to see if there are any patterns.")
 top_rated_games = games.sort_values('average rating',ascending=False).head(10).reset_index()[['title', 'average rating','total ratings', 'installs', 
        'growth (30 days)', 'growth (60 days)', 'price', 'category',
