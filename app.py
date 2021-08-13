@@ -17,6 +17,8 @@ st.sidebar.write('7. ','<a href=#the-percentage-of-free-games>The Percentage of 
 
 st.header('Android Games Data Analysis')
 
+st.markdown('August 13th, 2021, by Samuel Lee')
+
 st.subheader('Introduction')
 
 games = pd.read_csv("android-games.csv")
