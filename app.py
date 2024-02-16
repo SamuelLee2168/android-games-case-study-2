@@ -22,7 +22,7 @@ st.markdown('August 13th, 2021, by Samuel Lee')
 st.subheader('Introduction')
 
 games = pd.read_csv("android-games.csv")
-st.dataframe(games)
+st.dataframe(pd.DataFrame({"test1":[5,4,2],"test2":[532,5,2]}))
 st.markdown("In this article, we will be looking at a dataset of the top rated games in the google play store. We will ask questions about them to find some interesting observations, and analyze the data of the games.")
 
 st.subheader('The Top Rated Games')
